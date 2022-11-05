@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class = "header"> 
+        <a href="#"> <img src= logo.png alt="N"> </a>
+        
+    </div>
+  
+    <div id="main">
+        <h3 id=" plock" style=" color: white"> Profile Lock is currently on.</h3> <br>
+        <h1 id= "heading" style=" color: white">Enter your PIN to access this profile.</h1> <br>
+
+
+                <form action="netflix.html">
+                <div class="pincontainer">
+                    <input type="password" class="num" maxlength="1" required>
+                    <input type="password" class="num" maxlength="1" required>
+                    <input type="password" class="num" maxlength="1" required>
+                <input type="password" class="num" maxlength="1" required>
+                <input type="password" class="num" maxlength="1" required>
+                <input type="password" class="num" maxlength="1" required>
+        
+                     <script>
+        
+                const nums = document.querySelectorAll('.num')
+                const form = document.querySelector('form')
+                
+                nums.forEach((num, index) => {
+                    num.dataset.id = index
+                    
+                    num.addEventListener('keyup', () => {
+                        if (num.value.length == 1) {
+                            if (nums[nums.length - 1].value.length == 1) form.submit()
+                            nums[parseInt(num.dataset.id) + 1].focus()
+                        }
+                    })
+                })
+                
+                </script>
+        <br><br><br><br>
+        <h3 id=" plock" style=" color: white"> Forgot PIN? </h3>
+    </div>
+
+           
+        </body>
+        
+        
+    </html>
